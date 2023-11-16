@@ -25,18 +25,7 @@ if (environment.production) {
   enableProdMode();
 }
 
-/**
- *  CGV-INI-2:
- * 
- * Para que la App pueda ser usada en un browser, se habilitará "jeepSqlite",
- * lo que permitirá usar la base de datos del browser, la que se puede
- * revisar en el menú "Application" durante la depuración en Chrome.
- * 
- * ¡¡¡IMPORTANTE!!!
- * Se debe copiar manualmente el archivo "sql-wasm.wasm" desde la
- * carpeta "/node_modules/sql.js/dist/sql-wasm.wasm" a la carpeta "/src/assets"
- * 
- */
+
 const platform = Capacitor.getPlatform();
 if(platform === "web") {
   jeepSqlite(window);
